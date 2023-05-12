@@ -1,0 +1,14 @@
+Day 1
+
+var k=require("fs");
+
+//k.writeFileSync("h.txt","rtcghjncvbnxcvbvdfg");
+//k.appendFileSync("./h.txt","gggggggggggggggg");
+//var c= k.readFileSync("./h.txt","utf-8");buffer data read
+//k.renameSync("h.txt","aj.txt");
+//k.unlinkSync("aj.txt");//deleted
+//k.mkdirSync("FHY");//CREATE NEW Follder
+//k.rmdirSync("FHY");
+console.log("c");
+
+Day 2

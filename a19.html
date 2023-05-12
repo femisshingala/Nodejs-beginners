@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="quotes"></div>
+    <button>new quoute</button>
+    <script>
+        let read="";
+        const qu = document.getElementsByClassName("quotes");
+        const getnew = ( )=>{
+            let rnum = Math.floor(Math.random() * 10);
+          console.log(read[rnum].text);
+            qu.innerText = `${read[rnum].text}`;
+        };
+
+
+        const get = async()=>{
+            const api="https://type.fit/api/quotes";
+            try{
+                let data = await fetch(api);
+                 read = await data.json();
+
+                getnew();
+
+               // console.log(read);
+            //    let i=2;
+            //    console.log(read[i].author);
+            //     console.log(read[i].text);
+               // console.log(data.json());
+            }catch(error){ }
+        }
+       
+
+        get();
+    </script>
+</body>
+</html>
